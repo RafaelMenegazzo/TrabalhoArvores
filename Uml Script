@@ -1,0 +1,58 @@
+@startuml
+
+Enum Cat_qua{
+
+ECONOMICO
+LUXO
+
+}
+
+class Nodo{
+- Nodo direita
+- Nodo esquerda
+- Cliente cliente
+- Quarto quarto
+- check_in LocalDateTime
+- check_out LocalDateTime
+
+ + Nodo(Cliente cli, Quarto qua)
+
+}
+
+
+class Quarto{
+- int num_quarto
+- boolean disponivel
+- cat_qua categoria
+- LocalDateTime 
+}
+
+
+class Cliente{
+ - int id_cliente
+ - String cpf
+ - String nome
+ 
+
+}
+
+class Reserva{
+ 
+ - Nodo raiz
+ 
+ + checkout()
+ + reservar()
+ 
+ }
+ 
+ class Registro{
+    
+    - Nodo raiz
+    
+    + inserirRegistro()
+    + mostrarRegistro()
+ 
+ }
+
+ 
+@enduml
