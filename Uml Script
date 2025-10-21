@@ -7,13 +7,20 @@ LUXO
 
 }
 
+Enum Status{
+
+ATIVO
+CANCELADO
+
+}
+
 class Nodo{
+
 - Nodo direita
 - Nodo esquerda
 - Cliente cliente
 - Quarto quarto
-- check_in LocalDateTime
-- check_out LocalDateTime
+- Status situacao
 
  + Nodo(Cliente cli, Quarto qua)
 
@@ -24,7 +31,8 @@ class Quarto{
 - int num_quarto
 - boolean disponivel
 - cat_qua categoria
-- LocalDateTime 
+- LocalDateTime DataIniOcup 
+- LocalDateTime DataFimOcup
 }
 
 
@@ -41,7 +49,11 @@ class Reserva{
  - Nodo raiz
  
  + checkout()
+ + checkin()
  + reservar()
+ + cancelarReserva()
+ 
+ 
  
  }
  
@@ -53,6 +65,12 @@ class Reserva{
     + mostrarRegistro()
  
  }
+ 
+ Cat_qua -down Quarto
+ Status - Nodo
+ Quarto --* Nodo
+ Cliente --* Nodo
+ Nodo --* Reserva
 
  
 @enduml
