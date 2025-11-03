@@ -9,10 +9,20 @@ public class Reserva {
 	private int capacidade = 10;
 	private int[] cap_mes= new int[12];
 	private int[] can_mes = new int[12];
+	private int[] qua_res = new int[10];
 	
 	
 	
 	
+	
+	public int[] getQua_res() {
+		return qua_res;
+	}
+
+	public void setQua_res(int[] qua_res) {
+		this.qua_res = qua_res;
+	}
+
 	public int[] getCap_mes() {
 		return cap_mes;
 	}
@@ -194,6 +204,7 @@ public class Reserva {
 		
 		//adiciona  1 no array referente ao mês de reservado
 		cap_mes[novoNodo.getQuarto().getDataCheckin().getMonthValue() -1]++;
+		qua_res[novoNodo.getQuarto().getNum_quarto() - 1]++;
 
 	}
 	

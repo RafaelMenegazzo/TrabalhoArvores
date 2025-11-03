@@ -128,6 +128,14 @@ public class Main {
 			i++;
 		}
 		
+		 i = 1;
+		 System.out.println();
+		for(int a : res.getQua_res()) {
+			System.out.println("Quarto: "+ i + " " + a + " Reservas");
+			i++;
+		
+		
+		}
 	}
 }
 
